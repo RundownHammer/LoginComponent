@@ -22,7 +22,7 @@ This repository contains a full-stack login application built with:
 
 1. **Navigate to the backend folder**  
    ```bash
-   cd backend
+   cd server
 
 2. **Install dependencies**
     ```bash
