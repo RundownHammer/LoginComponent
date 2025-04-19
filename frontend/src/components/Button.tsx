@@ -3,6 +3,8 @@ type ButtonProps = {
   type?: "button" | "submit" | "reset";
 };
 
+// A button that takes its text (the text written inside the buton border) and its type (button, submit, reset) as props
+
 export function Button({ text, type = "button" }: ButtonProps) {
   return (
     <button

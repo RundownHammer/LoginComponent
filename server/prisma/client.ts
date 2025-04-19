@@ -2,6 +2,7 @@ import { PrismaClient } from '@prisma/client';
 
 export const prisma = new PrismaClient();
 
+// adding the test user into the database
 async function addTestUser() {
   const existing = await prisma.user.findUnique({
     where: { email: "test@example.com" },

@@ -14,8 +14,12 @@ export function App() {
     resolver: zodResolver(loginSchema),
   });
 
+  // to get properties like isSuccessfull, isLoading etc.
   const loginMutation = useLogin();
 
+  // this function is the final stage after the user input verification by validation, 
+  // auth (api call) and the uselogin function
+  
   const onSubmit = (data: LoginFormData) => {
     loginMutation.mutate(data);
   };
