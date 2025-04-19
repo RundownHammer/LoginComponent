@@ -1,0 +1,19 @@
+import { RequestHandler } from "express";
+import {prisma} from "../../prisma/client";
+
+export const login: RequestHandler = async (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    res.status(400).json({ message: "Email and password are required." });
+    return;
+  }
+
+  const user = await prisma.user.findUnique({ where: { email } });
+  if (!user || user.password !== password) {
+    res.status(401).json({ message: "Invalid credentials" });
+    return;
+    }
+    
+  res.status(200).json({ message: "Logged in successfully" });
+};
