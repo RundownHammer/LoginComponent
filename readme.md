@@ -1,4 +1,4 @@
-# Full Stack Login Assignment
+# Full Stack Login App
 
 This repository contains a full-stack login application built with:
 
